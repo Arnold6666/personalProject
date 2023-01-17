@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed w-100" id="nav-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">智能診股黑科技</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">查詢股票</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="qa.html">常見問題</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!--nav end-->
+
+  <!-- carousel -->
+  <!-- about us -->
+  <div class="question">
+    <div class="container pt-4">
+      <div class="row">
+        <h2 class="ps-5">常見問題</h2>
+        <hr>
+        <div class="accordion" id="question">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                1. 股票是甚麼
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#question">
+              <div class="accordion-body">
+                股份公司為了籌集資金，發給投資人的憑證。持有特定公司股票的人為股東。台股的交易單位最小為股，而一張股票擁有1000股。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-controls="collapseTwo">
+                2. 股票種類
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#question">
+              <div class="accordion-body">
+                依不同情況分類如下：<br>
+                按股東權利分為：普通股、特別股。<br>
+                按股票狀況分為：普通股、全額交割股<br>
+                按交易方式分為：可分為上市股票（集中市場交易）、上櫃股票（櫃檯買賣交易）、興櫃股票（即將上市上櫃股票）、未上市上櫃股票。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-controls="collapseThree">
+                3. 如何開始交易
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#question">
+              <div class="accordion-body">
+                要開始交易股票必須先有證券帳戶，目前大多數擁有證券服務的金控，只要擁有其戶頭，通常可以透過網路直接辦理其旗下的證券交割戶，成功開戶後，便可以透過電話託請營業員下單，或者透過電腦或行動裝置的應用程式電子下單。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-controls="collapseFour">
+                4. 什麼是T+2交割日?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#question">
+              <div class="accordion-body">
+                台股的股票購買款項為交易日的往後兩天由交割戶扣除，若兩日後交割戶中餘額不足便會導致違約交割，會對個人的信用造成負面影響。同樣賣出後的股款也會在兩日後匯入交割戶中。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-controls="collapseFive">
+                5. 交易額度限制?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#question">
+              <div class="accordion-body">
+                每個證券戶都會有一個交易額度限制，一般來說常見每日交易額度為20-100萬不等，依開戶時的財力證明給予不同的額度上限。證券商需要你提供「申請額度的三成」當作財力證明，例如你需要100萬元的額度，就要提供30萬元的財力證明；你需要200萬元的額度，就要60萬元的財力，依此類推。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix">
+                6. 台灣股票漲跌幅限制
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+              data-bs-parent="#question">
+              <div class="accordion-body">
+                台灣的股票市場中，主要分為無漲跌幅限制的興櫃股(但其買賣的限制較上市上櫃不同)，有漲跌幅限制10%的上櫃上市股票。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven">
+                7. 零股交易
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+              data-bs-parent="#question">
+              <div class="accordion-body">
+                零股交易與一般交易最大的差別就是「買賣股票的單位不同」，買賣以股為待為，實際上買、賣零股的手續費、下單方式都跟一般(整股)買股票沒有差別。但其搓合時間為9:10-13:20。每分鐘搓合一次。也要注意在部分流動性不足的股票容易導致買入零股後不易賣出。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

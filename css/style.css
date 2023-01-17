@@ -1,0 +1,38 @@
+/* top nav */
+#nav-top{
+  z-index: 100;
+}
+/* top-nav end */
+
+/* carousel */
+.carousel-container .carousel-inner{
+  height: 100vh;
+}
+/* carousel end */
+
+/* aboutus */
+.about-us{
+  background-color: rgb(231, 231, 231);
+}
+
+.about-us p{
+  text-align: justify;
+  line-height: 2;
+  letter-spacing: 5px;
+}
+
+/* qa */
+.question{
+  padding-top: 56px;
+}
+
+/* search */
+.search{
+  padding-top: 100px;
+}
+
+.search input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

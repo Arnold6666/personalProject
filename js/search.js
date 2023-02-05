@@ -2,14 +2,22 @@ document.getElementById("searchStockBtn").onclick = function () {
   let stockNum = document.getElementById("searchStock").value;
 
   let year = new Date().getFullYear();
-  let month = new Date().getMonth();
+  let month = new Date().getMonth() + 1;
   let day = new Date().getDate();
+  month = month.toString();
   year = year.toString();
-  month = "0" + (month + 1).toString();
   day = day.toString();
-  date = year + month + day
 
-  var stocks;
+  if(month.length == 1){
+    month = "0" + month;
+  }
+
+  if(day.length == 1){
+    day = "0" + day;
+  }
+  
+  date = year + month + day
+  
   fetch(`https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=${date}&stockNo=${stockNum}`)
     .then((res) => {
       const data = res.json();
@@ -24,13 +32,15 @@ document.getElementById("searchStockBtn").onclick = function () {
       h1.style.textAlign = "center"
       h1.appendChild(title);
       container.appendChild(h1);
+      
+      // console.log(stocks)//除錯用
 
       let table = document.createElement("table");
       table.style.margin = "0 auto";
       table.setAttribute("border", "1");
       table.style.borderCollapse = "collapse";
       table.style.textAlign = "center";
-      table.style.width = "800px"
+      table.style.width = "800px";
 
       container.appendChild(table);
 
@@ -41,10 +51,14 @@ document.getElementById("searchStockBtn").onclick = function () {
         td.innerHTML = tHead[i];
       }
 
-      let tContent = stocks.data
-      for (let i = 10; i > 0; i--) {
+      let tContent = stocks.data;
+
+      // console.log(tContent); //除錯用
+      
+      let tContentL = tContent.length - 1;
+      for (let i = tContentL; i > 0; i--) {
         let tableRow = table.insertRow();
-        for (let j = 0; j < tContent[i].length; j++) {
+        for (let j = 0; j < tContent[i].length - 1; j++) {
           let rowTd = tableRow.insertCell();
           rowTd.innerHTML = tContent[i][j];
         }

@@ -1,3 +1,15 @@
+.text-justify{
+  text-align: justify;
+}
+
+.bg-gray{
+  background-color: #dddddd;
+}
+
+.bg-lightcyan{
+  background-color: #D1FAFF;
+}
+
 /* top nav */
 #nav-top{
   z-index: 100;
@@ -7,6 +19,13 @@
 /* carousel */
 .carousel-container .carousel-inner{
   height: 100vh;
+  padding-top: 56px;
+}
+
+.carousel-container .carousel-inner .carousel-caption {
+  bottom: 30%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
 }
 /* carousel end */
 
@@ -30,6 +49,17 @@
 .search{
   padding-top: 100px;
 }
+
+/* why */
+  /* why content */
+  .whyContent{
+    padding-top: 56px;
+  }
+
+  .whyContent .needToKnow a{
+    color: #6c757d;
+    text-decoration: none;
+  }
 
 .search input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

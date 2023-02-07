@@ -1,6 +1,5 @@
-document.getElementById("searchStockBtn").onclick = function () {
-  let stockNum = document.getElementById("searchStock").value;
 
+function getTodayDate() {
   let year = new Date().getFullYear();
   let month = new Date().getMonth() + 1;
   let day = new Date().getDate();
@@ -8,15 +7,20 @@ document.getElementById("searchStockBtn").onclick = function () {
   year = year.toString();
   day = day.toString();
 
-  if(month.length == 1){
+  if (month.length == 1) {
     month = "0" + month;
   }
 
-  if(day.length == 1){
+  if (day.length == 1) {
     day = "0" + day;
   }
+  return year + month + day;
+}
+
+document.getElementById("searchStockBtn").onclick = function () {
+  let stockNum = document.getElementById("searchStock").value;
   
-  date = year + month + day
+  date = getTodayDate();
   
   fetch(`https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=${date}&stockNo=${stockNum}`)
     .then((res) => {
@@ -68,4 +72,3 @@ document.getElementById("searchStockBtn").onclick = function () {
   // https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20230113&stockNo=2330
 }
 
-// console.log(stocks)

@@ -62,53 +62,86 @@
   }
 
 /* recommendWeb */
+  .recommendWeb{
+    height: 530px;
+  }
 
-.recommend{
-  position:absolute;
-  transform-style:preserve-3d;
-  transition:0.5s all ease;
-  box-shadow:0px 0px 10px rgba(10,10,0.8);
+  .recommendWeb2{
+    height: 480px;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    /* background-color: dodgerblue; */
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .overlayContent{
+    background-color: rgba(221, 221, 221, 0.9);
+    position: relative;
+    padding: 50px 5px;
+    top: -350px;
+    left: 0;
+    letter-spacing: 5px;
+  }
+
+  .overlayContent p{
+    font-size: 20px;
+  }
+
+  .gooaye{
+    border: 3px solid rgba(221, 221, 221, 0.85);
+  }
+
+  .overlay-container{
+    height: 100%;
+  }
+
+/* searchPage */
+  .top20table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    width: 1000px;
+  }
+
+  .search input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+/* recommendB Page */
+.recommendB{
+  padding-top: 56px;
 }
-
-.recommend:hover{
-  transform:rotateY(180deg);
-}
-
-.card-front{
-  border-radius:5px;
-  position:absolute;
-  background:#e8e8e8;
-  width:100%;
-  height:100%;
-  /*hide backface*/
-  backface-visibility:hidden;
-  color:#333;
-  font-size:1.5rem;
-}
-
-.card-back{
-  border-radius:5px;
-  position:absolute;
-  width:100%;
-  height:100%;
-  /*hide backface*/
-  backface-visibility:hidden;
-  color:#333;
-  font-size:1.5rem;
-  /* background:url("../images/MacroMicro.webp") center top repeat; */
-
-  transform:rotateY(180deg);
-}
-
-.card-img-overlay{
-  display: block;
-  background-color: rgba(255, 255, 255,0.3);
-  /* padding: 100%; */
-}
-
-.search input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
